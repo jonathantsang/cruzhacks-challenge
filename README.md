@@ -98,10 +98,20 @@ Expects a payload with the following format:
 A successful request will return
 
 ```
-HTTP Status Code 200
+HTTP Status Code 201
 {
     'result': 'Success',
     'msg': 'OK'
+}
+```
+
+If one or more required fields is missing, it will return
+
+```
+HTTP Status Code 400
+{
+    'result': 'Error',
+    'msg': 'One or more required fields is missing'
 }
 ```
 
@@ -142,6 +152,16 @@ HTTP Status Code 200
 {
     'result': 'Success',
     'msg': 'OK'
+}
+```
+
+If one or more required fields is missing, it will return
+
+```
+HTTP Status Code 400
+{
+    'result': 'Error',
+    'msg': 'One or more required fields is missing'
 }
 ```
 
