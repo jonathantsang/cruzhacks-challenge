@@ -1,0 +1,15 @@
+# ADD NEW QUERIES TO THE BOTTOM
+
+# create initial tables
+CREATE TABLE UserType (UserTypeCode varchar(10) primary key not null, Name text not null);
+CREATE TABLE State (StateCode varchar(2) primary key not null, StateName varchar(50) not null);
+CREATE TABLE UserProfile (UserProfileId uuid primary key, UserTypeCode varchar(10) not null REFERENCES UserType(UserTypeCode), Name varchar(100) not null, School varchar(100) null, Major varchar(50) null, Street1 varchar(100) not null, Street2 varchar(100) null, City varchar(50) not null, StateCode varchar(2) not null REFERENCES State(StateCode), ZipCode varchar(9) not null, CountryCode varchar(100) not null, Phone varchar(20) not null, Email varchar(100) not null, BirthDate date not null, ProfileImageUrl varchar(200) null);
+
+# insert 4 initial data types
+INSERT INTO UserType (UserTypeCode, Name) VALUES ('ADM', 'Admin');
+INSERT INTO UserType (UserTypeCode, Name) VALUES ('HCK', 'Hacker');
+INSERT INTO UserType (UserTypeCode, Name) VALUES ('MTR', 'Mentor');
+INSERT INTO UserType (UserTypeCode, Name) VALUES ('JDG', 'Judge');
+
+# insert states
+INSERT INTO State (StateCode, StateName) VALUES ('AL', 'Alabama'), ('AK', 'Alaska'), ('AZ', 'Arizona'), ('AR', 'Arkansas'), ('CA', 'California'), ('CO', 'Colorado'), ('CT', 'Connecticut'), ('DE', 'Delaware'), ('DC', 'District of Columbia'), ('FL', 'Florida'), ('GA', 'Georgia'), ('HI', 'Hawaii'), ('ID', 'Idaho'), ('IL', 'Illinois'), ('IN', 'Indiana'), ('IA', 'Iowa'), ('KS', 'Kansas'), ('KY', 'Kentucky'), ('LA', 'Louisiana'), ('ME', 'Maine'), ('MD', 'Maryland'), ('MA', 'Massachusetts'), ('MI', 'Michigan'), ('MN', 'Minnesota'), ('MS', 'Mississippi'), ('MO', 'Missouri'), ('MT', 'Montana'), ('NE', 'Nebraska'), ('NV', 'Nevada'), ('NH', 'New Hampshire'), ('NJ', 'New Jersey'), ('NM', 'New Mexico'), ('NY', 'New York'), ('NC', 'North Carolina'), ('ND', 'North Dakota'), ('OH', 'Ohio'), ('OK', 'Oklahoma'), ('OR', 'Oregon'), ('PA', 'Pennsylvania'), ('PR', 'Puerto Rico'), ('RI', 'Rhode Island'), ('SC', 'South Carolina'), ('SD', 'South Dakota'), ('TN', 'Tennessee'), ('TX', 'Texas'), ('UT', 'Utah'), ('VT', 'Vermont'), ('VA', 'Virginia'), ('WA', 'Washington'), ('WV', 'West Virginia'), ('WI', 'Wisconsin'), ('WY', 'Wyoming');
