@@ -1,6 +1,11 @@
+# db.md
+
+## NOTE: this is meant to be viewed in a text editor rather than compiled markdown, sorry!
+
 [UserType]
 *UserTypeCode {"label":"varchar(10),not null"} # recs=ADM(Admin),HCK(Hacker),MTR(Mentor),JUD(Judge)
 Name {"label":"text,not null"}
+
 
 [UserProfile]
 *UserProfileId {"label":"uuid,not null"}
@@ -18,6 +23,7 @@ Phone {"label":"varchar(20),not null"}
 Email {"label":"varchar(100),not null"}
 BirthDate {"label":"datetime",not null"}
 ProfileImageUrl {"label":"nvarchar(200),null"}
+
 
 [State]
 *StateCode {"label":"nvarchar(2),not null"}
