@@ -1,7 +1,6 @@
 from . import UserProfileQueries as queries
 import uuid
 import psycopg2
-import os
 from configparser import ConfigParser
 
 conf = ConfigParser()
