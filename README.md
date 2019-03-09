@@ -25,7 +25,7 @@ Example:
 GET http://localhost:8080/ba2bc8f0-abbf-44b9-93ec-53cb9455aac4
 ```
 
-Gets and returns the user's information with the corresponding id. If the user exists, data will be returned as a dicitonary.
+Gets and returns the user's information with the corresponding id. If the user exists, data will be returned as a dictionary.
 An example is as follows:
 
 ```
